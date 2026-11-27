@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Motion, Parallax, Spotlight, Marquee & Accessibility Choreography
+   ========================================================================== */
+
+/* 1. Scroll Reveal Choreography & Immediate Hero Entrance */
+@keyframes heroEntrance {
+  from {
+    opacity: 0.01;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-stagger-1 { animation: heroEntrance 650ms var(--ease-apple) 40ms backwards; }
+.hero-stagger-2 { animation: heroEntrance 750ms var(--ease-apple) 120ms backwards; }
+.hero-stagger-3 { animation: heroEntrance 750ms var(--ease-apple) 200ms backwards; }
+.hero-stagger-4 { animation: heroEntrance 750ms var(--ease-apple) 280ms backwards; }
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity var(--duration-slow) var(--ease-apple),
+    transform var(--duration-slow) var(--ease-apple),
+    filter var(--duration-slow) var(--ease-apple);
+}
+
+[data-reveal="left"] {
+  transform: translate3d(-24px, 0, 0) scale(0.985);
+}
+
+[data-reveal="right"] {
+  transform: translate3d(24px, 0, 0) scale(0.985);
+}
+
+[data-reveal="scale"] {
+  transform: translate3d(0, 16px, 0) scale(0.95);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* Staggered Reveal Delays */
+[data-delay="100"] { transition-delay: 100ms; }
+[data-delay="200"] { transition-delay: 200ms; }
+[data-delay="300"] { transition-delay: 300ms; }
+[data-delay="400"] { transition-delay: 400ms; }
+
+/* 2. Hardware-Accelerated Parallax Layers */
+[data-parallax] {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 3. Cursor-Tracking Crimson Spotlight Border */
+.spotlight-card {
+  position: relative;
+  --mx: 50%;
+  --my: 50%;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    420px circle at var(--mx) var(--my),
+    rgba(255, 45, 85, 0.55),
+    rgba(251, 113, 133, 0.16) 35%,
+    transparent 68%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms var(--ease-apple);
+  z-index: 2;
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    480px circle at var(--mx) var(--my),
+    rgba(255, 45, 85, 0.08),
+    transparent 65%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms var(--ease-apple);
+  z-index: 0;
+}
+
+.spotlight-card:hover::before,
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+.spotlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 4. 3D Hover Tilt & Magnetic Controls */
+[data-tilt] {
+  transform-style: preserve-3d;
+  transition:
+    transform 420ms var(--ease-apple),
+    border-color 300ms var(--ease-apple),
+    background-color 300ms var(--ease-apple),
+    box-shadow 420ms var(--ease-apple);
+}
+
+[data-magnetic] {
+  transition:
+    transform 280ms var(--ease-apple),
+    box-shadow 280ms var(--ease-apple),
+    background-color 220ms var(--ease-apple),
+    border-color 220ms var(--ease-apple);
+}
+
+/* 5. Keyframe Animations */
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -16px, 0) rotate(2.5deg);
+  }
+}
+
+@keyframes auroraBreathe {
+  0%, 100% {
+    opacity: 0.72;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.96;
+    transform: scale(1.07) translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes statusPing {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  75%, 100% {
+    transform: scale(2.35);
+    opacity: 0;
+  }
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.hero-orb-inner {
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+.hero-aura {
+  animation: auroraBreathe 9s ease-in-out infinite;
+}
+
+.status-dot::after {
+  animation: statusPing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.scroll-line-runner {
+  animation: scrollPulse 2s var(--ease-apple) infinite;
+}
+
+.marquee-track--left {
+  animation: marqueeLeft 26s linear infinite;
+}
+
+.marquee-track--right {
+  animation: marqueeRight 30s linear infinite;
+}
+
+.marquee-shell:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.iframe-loader::after {
+  animation: shimmerSweep 1.6s infinite;
+}
+
+/* 6. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4,
+  .hero-orb-inner,
+  .hero-aura,
+  .status-dot::after,
+  .scroll-line-runner,
+  .marquee-track--left,
+  .marquee-track--right,
+  .iframe-loader::after {
+    animation: none !important;
+  }
+
+  [data-parallax],
+  [data-tilt],
+  [data-magnetic],
+  .iframe-shell,
+  .skill-bar-fill {
+    transition: none !important;
+    transform: none !important;
+  }
+}

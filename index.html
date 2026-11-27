@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jolex Besueña — College Developer &amp; UI Designer</title>
+  <meta name="description" content="Portfolio of Jolex Besueña, BSIT college student and web developer crafting Apple-inspired, high-precision digital experiences.">
+  <meta name="theme-color" content="#050507">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jolex Besueña — Portfolio">
+  <meta property="og:description" content="Apple-inspired Crimson &amp; Obsidian portfolio featuring live interactive web engineering work.">
+  <meta property="og:type" content="website">
+
+  <!-- Inline Crimson JB Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050507'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='%23ff2d55' stroke-opacity='0.55' stroke-width='2'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23f5f5f7' font-family='system-ui,sans-serif' font-weight='800' font-size='26'%3EJB%3C/text%3E%3Ccircle cx='49' cy='16' r='4' fill='%23ff2d55'/%3E%3C/svg%3E">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+
+  <!-- Interactive Engine -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Scroll Reading Progress Hairline -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Floating Frosted Glass Navigation -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-pill" aria-label="Primary Navigation">
+      <a href="#hero" class="brand-mark" aria-label="Jolex Besueña Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>JB.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="#showcase" class="nav-link" data-nav="showcase">Showcase</a></li>
+        <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+        <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+        <li><a href="#journey" class="nav-link" data-nav="journey">Journey</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta" data-magnetic>
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Full-Screen Frosted Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <a href="#about" class="mobile-drawer-link">About</a>
+    <a href="#showcase" class="mobile-drawer-link">Live Showcase</a>
+    <a href="#projects" class="mobile-drawer-link">Projects</a>
+    <a href="#skills" class="mobile-drawer-link">Skills</a>
+    <a href="#journey" class="mobile-drawer-link">Journey</a>
+    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+  </div>
+
+  <main>
+    <!-- ==================================================================
+         1. Hero Section — Multi-Layer Parallax
+         ================================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="hero-aura" data-parallax="0.22" aria-hidden="true"></div>
+
+      <div class="hero-orb-stage" aria-hidden="true">
+        <div class="hero-orb-parallax" data-parallax="-0.18" data-mouse-parallax="24">
+          <div class="hero-orb-inner">
+            <img src="assets/images/hero-crimson-orb.png" alt="" class="hero-orb-img" width="800" height="800">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content" data-parallax="0.06">
+          <!-- EDIT: Student Degree & College Badge -->
+          <div class="status-pill hero-stagger-1">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>BSIT Student &bull; Kabankalan Catholic College</span>
+          </div>
+
+          <h1 class="hero-title hero-stagger-2">
+            <span class="hero-title-main">Jolex</span>
+            <span class="hero-title-accent">Besueña.</span>
+          </h1>
+
+          <p class="hero-tagline hero-stagger-3">
+            Crafting fast, responsive web experiences with Apple-grade precision, tactile motion, and clean front-end architecture.
+          </p>
+
+          <div class="hero-actions hero-stagger-4">
+            <a href="#showcase" class="btn btn-primary" data-magnetic>
+              <span>Explore Live Showcase</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-glass" data-magnetic>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll-cue" aria-label="Scroll to About section">
+        <span>Scroll</span>
+        <span class="scroll-line" aria-hidden="true">
+          <span class="scroll-line-runner"></span>
+        </span>
+      </a>
+    </section>
+
+    <!-- ==================================================================
+         2. About Bento Grid
+         ================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="eyebrow">Profile &amp; Craft</div>
+          <h2 class="section-title">
+            Designed to feel effortless.<br>
+            <span class="text-gradient-crimson">Engineered to perform.</span>
+          </h2>
+          <p class="section-subtitle">
+            I combine minimalist visual discipline with modern web fundamentals to turn ideas into polished, interactive sites.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- EDIT: Portrait Image Card (Replace assets/images/profile-jolex.png with your real photo anytime) -->
+          <article class="bento-card bento-portrait spotlight-card" data-reveal data-tilt>
+            <div class="portrait-media" data-parallax="0.04">
+              <img src="assets/images/profile-jolex.png" alt="Portrait of Jolex Besueña" class="portrait-img" width="768" height="960">
+              <div class="portrait-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="portrait-caption">
+              <div class="portrait-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span>Kabankalan City &bull; Negros Occ.</span>
+              </div>
+              <h3 class="portrait-name">Jolex Besueña</h3>
+              <p class="portrait-role">College Web Developer &amp; UI Builder</p>
+            </div>
+          </article>
+
+          <!-- EDIT: Student Bio & Philosophy -->
+          <article class="bento-card bento-story spotlight-card" data-reveal data-delay="100">
+            <div class="bento-kicker">About Me</div>
+            <h3 class="bento-heading">Bridging crisp aesthetics with reliable code.</h3>
+            <p class="bento-copy">
+              I'm an Information Technology college student at Kabankalan Catholic College, Inc. (CMAT) passionate about front-end engineering, responsive design systems, and fluid scroll interactions. From institutional multi-page web platforms to dark-mode study utilities, I obsess over typography, speed, and every pixel in between.
+            </p>
+          </article>
+
+          <!-- Metric 1 -->
+          <article class="bento-card bento-stat spotlight-card" data-reveal data-delay="100" data-tilt>
+            <div class="stat-value" data-counter="9" data-suffix="+">0+</div>
+            <div>
+              <p class="stat-label">Production Pages Shipped</p>
+              <p class="stat-note">Built &amp; deployed for the KCC web platform</p>
+            </div>
+          </article>
+
+          <!-- Metric 2 -->
+          <article class="bento-card bento-stat spotlight-card" data-reveal data-delay="200" data-tilt>
+            <div class="stat-value" data-counter="100" data-suffix="%">0%</div>
+            <div>
+              <p class="stat-label">Responsive Architecture</p>
+              <p class="stat-note">Crafted fluidly from mobile to widescreen</p>
+            </div>
+          </article>
+
+          <!-- Dual-Row Tech Stack Marquee -->
+          <article class="bento-card bento-marquee spotlight-card" data-reveal data-delay="200">
+            <div>
+              <div class="bento-kicker">Core Toolkit</div>
+              <h3 class="bento-heading">Technologies I build with every day.</h3>
+            </div>
+
+            <div class="marquee-shell" aria-label="Technology stack">
+              <div class="marquee-track marquee-track--left">
+                <span class="stack-pill"><span class="stack-pill-dot"></span>HTML5 Semantic</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>CSS3 &amp; Grid</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>JavaScript ES6+</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Bootstrap 5</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Responsive UI</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Parallax Motion</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>HTML5 Semantic</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>CSS3 &amp; Grid</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>JavaScript ES6+</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Bootstrap 5</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Responsive UI</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Parallax Motion</span>
+              </div>
+
+              <div class="marquee-track marquee-track--right">
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Git &amp; GitHub</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>GitHub Pages</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>UI Prototyping</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Glassmorphism</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Accessibility</span>
+                <span class="stack-pill"><span class="stack-pill-dot"></span>Clean CSS Tokens</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Git &amp; GitHub</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>GitHub Pages</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>UI Prototyping</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Glassmorphism</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Accessibility</span>
+                <span class="stack-pill" aria-hidden="true"><span class="stack-pill-dot"></span>Clean CSS Tokens</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Quick Specs Card -->
+          <article class="bento-card bento-specs spotlight-card" data-reveal data-delay="300">
+            <div class="bento-kicker">Quick Specs</div>
+            <ul class="specs-list">
+              <li class="specs-item">
+                <span class="specs-key">Institution</span>
+                <span class="specs-val">Kabankalan Catholic College, Inc.</span>
+              </li>
+              <li class="specs-item">
+                <span class="specs-key">Department</span>
+                <span class="specs-val">College of Management, Accountancy &amp; Technology</span>
+              </li>
+              <li class="specs-item">
+                <span class="specs-key">Primary Focus</span>
+                <span class="specs-val">Front-End &amp; Interactive UI</span>
+              </li>
+              <li class="specs-item">
+                <span class="specs-key">GitHub</span>
+                <span class="specs-val">@besuenajolex-glitch</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. Featured Live Project Studio — KCC Iframe Showcase
+         ================================================================== -->
+    <section class="section showcase-section" id="showcase">
+      <div class="showcase-ambient" data-parallax="0.16" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header section-header--center" data-reveal>
+          <div class="eyebrow">Featured Live Project</div>
+          <h2 class="section-title">
+            Kabankalan Catholic College<br>
+            <span class="text-gradient-crimson">Interactive Studio Preview.</span>
+          </h2>
+          <p class="section-subtitle">
+            Explore the live multi-page KCC website redesign directly below. Switch viewports, jump between pages, or inspect in fullscreen.
+          </p>
+        </div>
+
+        <div class="studio-window" id="studioWindow" data-viewport="desktop">
+          <!-- Top macOS Safari Chrome -->
+          <div class="studio-chrome">
+            <div class="traffic-lights" aria-hidden="true">
+              <span class="traffic-dot traffic-dot--red"></span>
+              <span class="traffic-dot traffic-dot--yellow"></span>
+              <span class="traffic-dot traffic-dot--green"></span>
+            </div>
+
+            <div class="studio-url-bar" title="Live GitHub Pages URL">
+              <svg class="studio-url-lock" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span id="studioUrlText">besuenajolex-glitch.github.io/kcc/index.html</span>
+            </div>
+
+            <div class="studio-controls">
+              <div class="viewport-group" role="group" aria-label="Preview viewport size">
+                <button type="button" class="viewport-btn is-active" data-viewport-btn="desktop" aria-pressed="true">Desktop</button>
+                <button type="button" class="viewport-btn" data-viewport-btn="tablet" aria-pressed="false">Tablet</button>
+                <button type="button" class="viewport-btn" data-viewport-btn="mobile" aria-pressed="false">Mobile</button>
+              </div>
+
+              <button type="button" class="chrome-btn chrome-btn--accent chrome-btn--hidden" id="exitInteractBtn">
+                <span>Exit Interactive</span>
+              </button>
+
+              <button type="button" class="chrome-btn" id="reloadFrameBtn" aria-label="Reload live preview" title="Reload preview">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
+                  <polyline points="21 3 21 9 15 9"></polyline>
+                </svg>
+                <span>Reload</span>
+              </button>
+
+              <button type="button" class="chrome-btn" id="fullscreenBtn" aria-label="Toggle fullscreen preview" aria-pressed="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <polyline points="9 21 3 21 3 15"></polyline>
+                  <line x1="21" y1="3" x2="14" y2="10"></line>
+                  <line x1="3" y1="21" x2="10" y2="14"></line>
+                </svg>
+                <span id="fullscreenLabel">Fullscreen</span>
+              </button>
+
+              <a href="https://besuenajolex-glitch.github.io/kcc/index.html" target="_blank" rel="noopener noreferrer" class="chrome-btn" id="openExternalBtn">
+                <span>Open Live</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7"></path>
+                  <path d="M7 7h10v10"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Page Switcher Sub-Bar -->
+          <div class="studio-pages-bar">
+            <div class="page-tabs" role="tablist" aria-label="KCC website pages">
+              <button type="button" class="page-tab is-active" data-kcc-page="index.html" role="tab" aria-selected="true">Home</button>
+              <button type="button" class="page-tab" data-kcc-page="about.html" role="tab" aria-selected="false">About</button>
+              <button type="button" class="page-tab" data-kcc-page="programs.html" role="tab" aria-selected="false">Programs</button>
+              <button type="button" class="page-tab" data-kcc-page="admissions.html" role="tab" aria-selected="false">Admissions</button>
+              <button type="button" class="page-tab" data-kcc-page="campus-life.html" role="tab" aria-selected="false">Campus Life</button>
+              <button type="button" class="page-tab" data-kcc-page="contact.html" role="tab" aria-selected="false">Contact</button>
+            </div>
+            <span class="studio-status-label" id="studioStatusLabel">Scroll-safe mode &bull; Click below to browse</span>
+          </div>
+
+          <!-- Responsive Iframe Stage -->
+          <div class="iframe-stage">
+            <div class="iframe-shell">
+              <div class="iframe-loader" id="iframeLoader" aria-hidden="true">
+                <span class="loader-badge">Loading live KCC preview...</span>
+              </div>
+
+              <iframe
+                id="kccFrame"
+                class="kcc-iframe"
+                src="https://besuenajolex-glitch.github.io/kcc/index.html"
+                title="Kabankalan Catholic College, Inc. Live Website Preview"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <div class="iframe-guard" id="iframeGuard">
+                <button type="button" class="guard-pill" id="interactBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                  <span>Click to Interact Live</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engineering Highlights -->
+        <div class="showcase-highlights">
+          <article class="highlight-card spotlight-card" data-reveal>
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+              </svg>
+            </div>
+            <h3 class="highlight-title">9-Page Institutional Architecture</h3>
+            <p class="highlight-desc">Structured navigation spanning Home, Academics (Basic Ed, Senior High, College Programs), Admissions, Campus Life, and Contact.</p>
+          </article>
+
+          <article class="highlight-card spotlight-card" data-reveal data-delay="100">
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="highlight-title">Parallax &amp; Motion Choreography</h3>
+            <p class="highlight-desc">Custom hero parallax layers paired with AOS scroll reveals and cohesive typography across Playfair Display, Plus Jakarta Sans, and Inter.</p>
+          </article>
+
+          <article class="highlight-card spotlight-card" data-reveal data-delay="200">
+            <div class="highlight-icon" aria-hidden="true">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="highlight-title">Mobile-First Delivery</h3>
+            <p class="highlight-desc">Built with Bootstrap 5 grid foundations and custom CSS theme variables, deployed seamlessly via GitHub Pages.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. Selected Projects Grid
+         ================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="eyebrow">Selected Work</div>
+          <h2 class="section-title">
+            Projects crafted with<br>
+            <span class="text-gradient-crimson">attention to detail.</span>
+          </h2>
+          <p class="section-subtitle">
+            A curated mix of live production deployments and modern UI engineering concepts built during college.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- EDIT: Project 1 (KCC Live Project) -->
+          <article class="project-card spotlight-card" data-reveal data-tilt>
+            <div class="project-media">
+              <div class="kcc-mini-preview">
+                <div class="mini-browser-top">
+                  <div class="mini-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="mini-badge">Live Production</span>
+                </div>
+                <div>
+                  <div class="mini-preview-title">Kabankalan Catholic College, Inc.</div>
+                  <div class="mini-preview-url">besuenajolex-glitch.github.io/kcc/</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-type">Institutional Web Redesign</div>
+              <h3 class="project-title">KCC Official Web Concept</h3>
+              <p class="project-desc">
+                Complete multi-page modern redesign for Kabankalan Catholic College featuring parallax hero layers, program directories, and mobile-first navigation.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Bootstrap 5</span>
+                <span class="tag">AOS</span>
+              </div>
+              <div class="project-links">
+                <a href="#showcase" class="btn btn-primary btn-sm">Preview Above</a>
+                <a href="https://besuenajolex-glitch.github.io/kcc/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">Open Site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- EDIT: Project 2 (Sample College Project — Customize anytime) -->
+          <article class="project-card spotlight-card" data-reveal data-delay="100" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/project-campus-ui.png" alt="CampusSync Student Portal UI mockup" class="project-img" width="1024" height="640">
+            </div>
+
+            <div class="project-body">
+              <div class="project-type">UI / Dashboard Concept</div>
+              <h3 class="project-title">CampusSync — Student Portal</h3>
+              <p class="project-desc">
+                A dark-glass academic dashboard concept designed for college students to track class schedules, GPA progress, and department announcements at a glance.
+              </p>
+              <div class="project-tags">
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Glassmorphism</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="btn btn-glass btn-sm">Request Case Study</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- EDIT: Project 3 (Sample College Project — Customize anytime) -->
+          <article class="project-card spotlight-card" data-reveal data-delay="200" data-tilt>
+            <div class="project-media">
+              <img src="assets/images/project-pulse-app.png" alt="RedPulse Study and Focus App mockup" class="project-img" width="1024" height="640">
+            </div>
+
+            <div class="project-body">
+              <div class="project-type">Web Utility Concept</div>
+              <h3 class="project-title">RedPulse — Study &amp; Focus</h3>
+              <p class="project-desc">
+                Minimalist distraction-free study timer and task tracker inspired by Apple Watch rings, built to keep late-night coding sessions sharp and structured.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Web Audio / Timer</span>
+                <span class="tag">Local Storage</span>
+                <span class="tag">Motion UI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/besuenajolex-glitch" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">View GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         5. Skills & Engineering Capabilities
+         ================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="eyebrow">Capabilities</div>
+          <h2 class="section-title">
+            Technical precision meets<br>
+            <span class="text-gradient-crimson">modern visual craft.</span>
+          </h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card spotlight-card" data-reveal>
+            <div class="skill-card-head">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="skill-card-title">Frontend Architecture</h3>
+            </div>
+            <div class="skill-list">
+              <div>
+                <div class="skill-meta"><span class="skill-name">Semantic HTML5 &amp; SEO</span><span class="skill-pct">95%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="95"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">Modern CSS3 / Flexbox / Grid</span><span class="skill-pct">92%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="92"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">JavaScript (ES6+ DOM &amp; rAF)</span><span class="skill-pct">84%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="84"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card spotlight-card" data-reveal data-delay="100">
+            <div class="skill-card-head">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <h3 class="skill-card-title">UI &amp; Motion Systems</h3>
+            </div>
+            <div class="skill-list">
+              <div>
+                <div class="skill-meta"><span class="skill-name">Responsive &amp; Bento Layouts</span><span class="skill-pct">94%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="94"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">Parallax &amp; Micro-Interactions</span><span class="skill-pct">88%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="88"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">Design Tokens &amp; Typography</span><span class="skill-pct">90%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="90"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="skill-card spotlight-card" data-reveal data-delay="200">
+            <div class="skill-card-head">
+              <div class="skill-card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.79 1 1.44 1.09H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h3 class="skill-card-title">Workflow &amp; Deployment</h3>
+            </div>
+            <div class="skill-list">
+              <div>
+                <div class="skill-meta"><span class="skill-name">Git &amp; GitHub Pages</span><span class="skill-pct">89%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="89"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">Bootstrap 5 Ecosystem</span><span class="skill-pct">91%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="91"></div></div>
+              </div>
+              <div>
+                <div class="skill-meta"><span class="skill-name">Cross-Browser QA &amp; Performance</span><span class="skill-pct">86%</span></div>
+                <div class="skill-track"><div class="skill-bar-fill" data-skill-bar="86"></div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         6. Academic Journey Timeline
+         ================================================================== -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-header section-header--center" data-reveal>
+          <div class="eyebrow">Academic &amp; Builder Timeline</div>
+          <h2 class="section-title">
+            The journey so far,<br>
+            <span class="text-gradient-crimson">always shipping forward.</span>
+          </h2>
+        </div>
+
+        <div class="timeline" id="journeyTimeline">
+          <div class="timeline-track" aria-hidden="true">
+            <div class="timeline-beam" id="timelineBeam"></div>
+          </div>
+
+          <!-- EDIT: Update years, milestones, or coursework as needed -->
+          <article class="timeline-item spotlight-card" data-reveal="left">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <span class="timeline-period">2026 &bull; Flagship Web Release</span>
+            <h3 class="timeline-title">KCC Website Redesign &amp; Live Deployment</h3>
+            <div class="timeline-org">GitHub Pages &bull; 9-Page Institutional Build</div>
+            <p class="timeline-desc">
+              Designed and deployed a full modern multi-page website concept for Kabankalan Catholic College, Inc., integrating custom parallax hero visuals, responsive program cards, and clean CSS theming.
+            </p>
+          </article>
+
+          <article class="timeline-item spotlight-card" data-reveal="left" data-delay="100">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <span class="timeline-period">2025 &bull; UI Engineering &amp; Motion</span>
+            <h3 class="timeline-title">Design Systems &amp; Interactive Front-End</h3>
+            <div class="timeline-org">Self-Directed Labs &amp; Campus Prototypes</div>
+            <p class="timeline-desc">
+              Focused on Apple-grade visual hierarchy, CSS custom properties, hardware-accelerated `requestAnimationFrame` motion, and accessible responsive grids.
+            </p>
+          </article>
+
+          <article class="timeline-item spotlight-card" data-reveal="left" data-delay="200">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <span class="timeline-period">Present &bull; College Studies</span>
+            <h3 class="timeline-title">Bachelor of Science in Information Technology</h3>
+            <div class="timeline-org">Kabankalan Catholic College, Inc. &mdash; CMAT</div>
+            <p class="timeline-desc">
+              Building a strong foundation in web development, software engineering principles, database concepts, and collaborative version control in Kabankalan City.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         7. Contact Finale
+         ================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel spotlight-card" data-reveal="scale">
+          <div class="contact-grid">
+            <div>
+              <div class="eyebrow">Get In Touch</div>
+              <h2 class="contact-heading">
+                Let's build something<br>
+                <span class="text-gradient-crimson">remarkable.</span>
+              </h2>
+              <p class="contact-copy">
+                Open to college collaborations, front-end internships, freelance web redesigns, and creative UI challenges.
+              </p>
+
+              <!-- EDIT: Replace with Jolex's preferred email address -->
+              <div class="contact-quick-actions">
+                <button type="button" class="btn btn-primary" id="copyEmailBtn" data-email="jolex.besuena@example.com" data-magnetic>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy Email</span>
+                </button>
+
+                <a href="https://github.com/besuenajolex-glitch" target="_blank" rel="noopener noreferrer" class="btn btn-glass" data-magnetic>
+                  <span>GitHub Profile ↗</span>
+                </a>
+              </div>
+
+              <div class="social-row">
+                <a href="https://besuenajolex-glitch.github.io/kcc/index.html" target="_blank" rel="noopener noreferrer" class="social-pill">KCC Live Project</a>
+                <a href="https://github.com/besuenajolex-glitch/portfolio" target="_blank" rel="noopener noreferrer" class="social-pill">Portfolio Repo</a>
+                <span class="social-pill">Kabankalan City, PH</span>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-field">
+                <label for="contactName" class="form-label">Your Name</label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Maria Santos" required>
+              </div>
+              <div class="form-field">
+                <label for="contactEmail" class="form-label">Email Address</label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+              <div class="form-field">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Tell me about your project or collaboration..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Jolex Besueña. Crafted in Obsidian &amp; Crimson.</span>
+      <div class="footer-links">
+        <a href="#hero">Top</a>
+        <a href="#showcase">KCC Showcase</a>
+        <a href="https://github.com/besuenajolex-glitch" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Apple-Style Floating Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

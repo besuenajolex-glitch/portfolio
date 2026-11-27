@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Design Tokens — Apple Pro Obsidian + Crimson Red
+   ========================================================================== */
+
+:root {
+  /* Obsidian Canvas & Elevated Surfaces */
+  --bg-primary: #050507;
+  --bg-elevated: #0a0a0f;
+  --bg-surface: #111118;
+  --bg-card: rgba(18, 18, 24, 0.66);
+  --bg-card-hover: rgba(26, 26, 35, 0.78);
+  --bg-glass: rgba(14, 14, 19, 0.72);
+  --bg-chrome: rgba(20, 20, 26, 0.92);
+
+  /* Borders & Hairlines */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-crimson: rgba(255, 45, 85, 0.36);
+
+  /* Product (RED) & Crimson Spectrum */
+  --red-primary: #ff2d55;
+  --red-vivid: #e11d48;
+  --red-deep: #9f1239;
+  --red-ruby: #4c0519;
+  --red-soft: #fb7185;
+  --red-glow: rgba(255, 45, 85, 0.28);
+  --red-glow-strong: rgba(255, 45, 85, 0.45);
+
+  /* Typography Colors */
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+
+  /* Font Families */
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Fluid Apple Typography Scale */
+  --text-hero: clamp(3rem, 8.2vw, 6.5rem);
+  --text-display: clamp(2.15rem, 4.6vw, 3.6rem);
+  --text-title: clamp(1.35rem, 2.2vw, 1.75rem);
+  --text-lead: clamp(1.0625rem, 1.6vw, 1.3125rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* Spacing & Layout */
+  --container-max: 1200px;
+  --section-pad: clamp(4.5rem, 9vw, 8.5rem);
+  --gutter: clamp(1.125rem, 3vw, 2rem);
+
+  /* Apple Squircle Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 34px;
+  --radius-pill: 999px;
+
+  /* Shadows & Elevation */
+  --shadow-glass: 0 24px 64px -16px rgba(0, 0, 0, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-studio: 0 40px 100px -20px rgba(0, 0, 0, 0.85), 0 0 80px -25px rgba(255, 45, 85, 0.24);
+  --shadow-btn-red: 0 12px 32px -8px rgba(255, 45, 85, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
+  /* Motion Curves */
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 220ms;
+  --duration-base: 420ms;
+  --duration-slow: 850ms;
+
+  /* Z-Index Layers */
+  --z-bg: 0;
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-header: 100;
+  --z-modal: 500;
+  --z-toast: 600;
+  --z-progress: 700;
+}
